@@ -1,18 +1,25 @@
 class View {
-  constructor(game, el) {}
+  constructor(game, el) {
+    this.game = game
+    this.el = el
+    this.setupBoard();
+  }
 
   setupBoard() {
     let ul = document.createElement('ul')
-    ul.width = 500
-    ul.display = "flex"
-    ul.flexWrap = "wrap"
+    let counter = 1;
 
-    for(let i = 0; i < 10; i++) {
-      let li = document.createElement('li');
-      li.dataset.pos = i
-      ul.appendChild(li);
+    for (let i = 0; i < 3; i++) {
+      
+      for (let j = 0; j < 3; j++) {
+        let li = document.createElement("li");
+        li.setAttribute("data-pos", `[${i},${j}]`);
+        li.setAttribute("id", `${counter}`);
+        counter += 1;
+        ul.appendChild(li);
+      }
     }
-
+      this.el.appendChild(ul);
   }
     
   bindEvents() {}

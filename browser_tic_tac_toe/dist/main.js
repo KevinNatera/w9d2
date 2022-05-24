@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const View =  __webpack_require__(/*! ./ttt-view */ \"./src/ttt-view.js\");\nconst Game = __webpack_require__(/*! ../ttt_node/game */ \"./ttt_node/game.js\");\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    figure = document.querySelector('.ttt')\n});\n\n\n//# sourceURL=webpack://browser_tic_tac_toe/./src/index.js?");
+eval("const View =  __webpack_require__(/*! ./ttt-view */ \"./src/ttt-view.js\");\nconst Game = __webpack_require__(/*! ../ttt_node/game */ \"./ttt_node/game.js\");\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n      document.querySelector('.ttt')\n});\n\n\n//# sourceURL=webpack://browser_tic_tac_toe/./src/index.js?");
 
 /***/ }),
 
@@ -25,7 +25,7 @@ eval("const View =  __webpack_require__(/*! ./ttt-view */ \"./src/ttt-view.js\")
   \*************************/
 /***/ ((module) => {
 
-eval("class View {\n  constructor(game, el) {}\n\n  setupBoard() {}\n  \n  bindEvents() {}\n\n  handleClick(e) {}\n\n  makeMove(square) {}\n\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack://browser_tic_tac_toe/./src/ttt-view.js?");
+eval("class View {\n  constructor(game, el) {\n    this.game = game\n    this.el = el\n    this.setupBoard();\n  }\n\n  setupBoard() {\n    let ul = document.createElement('ul')\n    let counter = 1;\n\n    for (let i = 0; i < 3; i++) {\n      \n      for (let j = 0; j < 3; j++) {\n        let li = document.createElement(\"li\");\n        li.setAttribute(\"data-pos\", `[${i},${j}]`);\n        li.setAttribute(\"id\", `${counter}`);\n        counter += 1;\n        ul.appendChild(li);\n      }\n    }\n      this.el.appendChild(ul);\n  }\n    \n  bindEvents() {}\n\n  handleClick(e) {}\n\n  makeMove(square) {}\n\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack://browser_tic_tac_toe/./src/ttt-view.js?");
 
 /***/ }),
 
