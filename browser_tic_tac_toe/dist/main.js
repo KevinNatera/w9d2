@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const View =  __webpack_require__(/*! ./ttt-view */ \"./src/ttt-view.js\");\nconst Game = __webpack_require__(/*! ../ttt_node/game */ \"./ttt_node/game.js\");\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  // Your code here\n});\n\n\n//# sourceURL=webpack://browser_tic_tac_toe/./src/index.js?");
+eval("const View =  __webpack_require__(/*! ./ttt-view */ \"./src/ttt-view.js\");\nconst Game = __webpack_require__(/*! ../ttt_node/game */ \"./ttt_node/game.js\");\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    figure = document.querySelector('.ttt')\n});\n\n\n//# sourceURL=webpack://browser_tic_tac_toe/./src/index.js?");
 
 /***/ }),
 
