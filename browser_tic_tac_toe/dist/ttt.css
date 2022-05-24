@@ -1,0 +1,21 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+}
+
+
+li {
+    border: solid black 1px;
+    width: 125px;
+    height: 125px;
+    background: gray;
+}
+
+li:hover {
+    background: yellow;
+}
+
+li::marker {
+    color: rgba(0,0,0,0);
+}
